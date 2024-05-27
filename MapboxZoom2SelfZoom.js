@@ -134,6 +134,9 @@ const tileMap = [
         "meters": 128 * 2
     }
 ]
+function toNumberFixed(number, fractionNumber) {
+    return Number(number.toFixed(fractionNumber))
+}
 
 function tileRange (zoomIn40LatMap, tileMap) {
 
@@ -159,7 +162,7 @@ function tileRange (zoomIn40LatMap, tileMap) {
             const min = zoomIn40LatMap[prev].meters;
             const max = zoomIn40LatMap[cur].meters;
 
-            const _zoom = lerp(meters, min, max) + prevZoom;
+            const _zoom = toNumberFixed(lerp(meters, min, max) + prevZoom);
 
             range.push({
                 minZoom: _preZoom,
