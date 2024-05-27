@@ -1,5 +1,6 @@
 /**
  * mapboxgl latitude 40 meters/pixel
+ * https://docs.mapbox.com/help/glossary/zoom-level/
  */
 const zoomIn40LatMap = [
     {
