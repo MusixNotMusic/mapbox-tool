@@ -154,16 +154,15 @@ function tileRange (zoomIn40LatMap, tileMap) {
     let _preZoom = 0;
 
     const maxZoom = zoomIn40LatMap[zoomIn40LatMap.length - 1].zoom;
+    const maxMeter = zoomIn40LatMap[0].meters;
     breaks.forEach(({index, meters, zoom}, i) => {
         const cur = index;
         const prev = Math.max(cur - 1, 0);
         if (prev !== cur) {
-            const prevZoom = zoomIn40LatMap[prev].zoom;
-
             const min = zoomIn40LatMap[prev].meters;
             const max = zoomIn40LatMap[cur].meters;
 
-            const _zoom = toNumberFixed(lerp(meters, min, max) + prevZoom, 2);
+            const _zoom = toNumberFixed(Math.log2(maxMeter /meters), 2);
 
             range.push({
                 minZoom: _preZoom,
