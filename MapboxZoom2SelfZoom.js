@@ -2,7 +2,7 @@
  * mapboxgl latitude 40 meters/pixel
  * https://docs.mapbox.com/help/glossary/zoom-level/
  */
-let zoomIn0LatMao = [
+let zoomIn0LatMap = [
     {
         "zoom": 0,
         "meters": 78271.484
