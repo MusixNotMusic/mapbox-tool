@@ -207,27 +207,27 @@ const zoomIn40LatMap = [
 const tileMap = [
     {
         "zoom": 2,
-        "meters": 4096 * 2
+        "meters": 4096
     },
     {
         "zoom": 3,
-        "meters": 2048 * 2
+        "meters": 2048
     },
     {
         "zoom": 4,
-        "meters": 1024 * 2
+        "meters": 1024
     },
     {
         "zoom": 5,
-        "meters": 512 * 2
+        "meters": 512
     },
     {
         "zoom": 6,
-        "meters": 256 * 2
+        "meters": 256
     },
     {
         "zoom": 7,
-        "meters": 128 * 2
+        "meters": 128
     }
 ]
 function toNumberFixed(number, fractionNumber) {
